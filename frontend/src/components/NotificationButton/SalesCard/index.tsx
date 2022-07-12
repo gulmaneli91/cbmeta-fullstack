@@ -1,6 +1,7 @@
 import "./styles.css";
-import Icon from "../../../assets/img/notification.svg"
 import NotificationButton from "..";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function SalesCard () {
     return(
@@ -8,10 +9,20 @@ function SalesCard () {
         <h2>Pedidos</h2>
         <div>
             <div className="cb-vendas-formcontrol-container">
-                <input className="cb-vendas-formcontrol" type="text"/>
+                <DatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => {}}
+                    className="cb-vendas-formcontrol"
+                    dateFormat="dd/MM/yyyy"
+                />
             </div>
             <div className="cb-vendas-formcontrol-container">
-                <input className="cb-vendas-formcontrol" type="text"/>
+                <DatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => {}}
+                    className="cb-vendas-formcontrol"
+                    dateFormat="dd/MM/yyyy"
+                />
             </div>
         </div>
         <div>
